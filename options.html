@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Tab Masker – Rules & Groups</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>Site Rules</h1>
+    <table class="rules" id="rules">
+      <thead>
+        <tr><th>Pattern</th><th>Title</th><th>Favicon (data or URL)</th><th>Enabled</th><th></th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h2>Add rule</h2>
+    <div class="grid">
+      <input id="pat" placeholder="https://*.instagram.com/* or *youtube.com*" />
+      <input id="rtitle" placeholder="Canvas Dashboard" />
+      <input id="rfav" placeholder="data:image/png;base64,..." />
+      <button id="add">Add</button>
+    </div>
+
+    <h1 style="margin-top:24px;">Groups</h1>
+    <p class="help">Groups apply a default disguise across many domains. Per-site and per-tab overrides still win.</p>
+
+    <table class="rules" id="groupsTbl">
+      <thead>
+        <tr><th>Name</th><th>Enabled</th><th>Patterns (one per line)</th><th>Default title</th><th>Default favicon (data or URL)</th><th></th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h2>Add group</h2>
+    <div class="grid">
+      <input id="gname" placeholder="Group name" />
+      <input id="gtitle" placeholder="Canvas Dashboard" />
+      <input id="gfav" placeholder="data:image/png;base64,..." />
+      <button id="gadd">Add group</button>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

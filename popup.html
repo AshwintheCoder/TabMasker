@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Tab Masker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>Tab Masker</h1>
+
+    <div class="group">
+      <div class="label">Choose a preset</div>
+      <select id="preset"></select>
+      <div class="help">Fills in the fields below with a common disguise.</div>
+    </div>
+
+    <div class="group">
+      <div class="label">Custom title (what the tab should say)</div>
+      <input id="title" placeholder="Canvas Dashboard" />
+    </div>
+
+    <div class="group">
+      <div class="label">Favicon (icon) URL or data:image</div>
+      <input id="favicon" placeholder="https://.../favicon.ico or data:image/png;base64,..." />
+    </div>
+
+    <div class="group">
+      <div class="label">Copy title & icon from this URL</div>
+      <div style="display:flex; gap:6px;">
+        <input id="sourceUrl" style="flex:1;" placeholder="https://canvas.instructure.com/" />
+        <button id="copyFromUrl">Copy from URL</button>
+      </div>
+    </div>
+
+    <div class="group">
+      <button id="apply">Apply to this tab</button>
+      <div class="help">Applies only to the current tab right now.</div>
+    </div>
+
+    <div class="group">
+      <button id="siteRule" class="ghost">Save as rule for this site</button>
+      <div class="help">Auto-applies on every page of this domain.</div>
+    </div>
+
+    <div class="group">
+      <div class="label">Suggestion: add this site to a group?</div>
+      <div id="groupSuggestions" class="chiprow"></div>
+      <div class="help">One click to include the current site in Social / Shopping / Streaming / Gaming.</div>
+    </div>
+
+    <div class="help"><a href="#" id="openOptions">Manage site rules & groups</a></div>
+    <p class="hint" id="status" style="display:none;"></p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
